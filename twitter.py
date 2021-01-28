@@ -1,17 +1,20 @@
-CONSUMER_KEY='ZzcJtOAlEyoCZlzmmf7MRKQp8'
-CONSUMER_SECRET='bIQJmgQkD1AaVD4GDHZoCqtOhucw2NW5D4fR8J29PuRnJgjfYV'
-ACCESS_TOKEN='1135552582259159040-Kw0ElFpHheHEnp8WJixAOUZubnlRin'
-ACCESS_TOKEN_SECRET='x0o22q3bcEIhgDDog2T8kiTqtpA8r1YnOiTnHAKDg8wQf'
+import tweepy
+import os
 
-auth= tweepy.OAuthHandler(CONSUMER_KEY,CONSUMER_SECRET)
-auth.set_access_token(ACCESS_TOKEN,ACCESS_TOKEN_SECRET)
+consumer_key=os.getenv('consumer_key')
+consumer_secret=os.getenv('consumer_secret')
+access_token=os.getenv('access_token')
+access_token_secret=os.getenv('access_token_secret')
+
+auth= tweepy.OAuthHandler(consumer_key,consumer_secret)
+auth.set_access_token(access_token,access_token_secret)
 api=tweepy.API(auth)
 print("everythings looks fine")
 
 import time
 while True:
   user=api.get_user('_karthik_V_')
-  n=user.followers_count
-  api.update_profile(name=f'karthik{n}followers')
-  print(f'karthik{n}followers')
+  n=user.following_count
+  api.update_profile(name=f'karthik {n} following')
+  print(f'karthik{n}following')
   time.sleep(60)
