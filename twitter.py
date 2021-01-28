@@ -18,4 +18,3 @@ while True:
   
 print(f'karthik{n}followers')
 time.sleep(60)
-  
