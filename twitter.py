@@ -20,7 +20,7 @@ import time
 
 while True:
   user=api.get_user('_karthik_V_')
-  n=user.following_count
+  n=user.followers_count
   api.update_profile(name=f'Karthik {n} following')
   print(f'Karthik {n} following')
   time.sleep(60)
