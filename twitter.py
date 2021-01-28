@@ -1,4 +1,3 @@
-
 import tweepy
 import os
 
@@ -19,8 +18,4 @@ while True:
   api.update_profile(name=f'Karthik {n} followers')
   print(f'karthik{n}followers')
   time.sleep(60)
-  
-  
-  
-  
   
