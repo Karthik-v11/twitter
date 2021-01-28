@@ -1,4 +1,4 @@
-import tweepy
+
 import os
 
 consumer_key=os.getenv('consumer_key')
