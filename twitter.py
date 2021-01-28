@@ -18,3 +18,6 @@ while True:
   api.update_profile(name=f'karthik {n} following')
   print(f'karthik{n}following')
   time.sleep(60)
+  
+  
+  
