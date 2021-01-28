@@ -15,9 +15,9 @@ print("everythings looks fine")
 import time
 while True:
   user=api.get_user('_karthik_V_')
-  n=user.following_count
-  api.update_profile(name=f'karthik {n} following')
-  print(f'karthik{n}following')
+  n=user.followers_count
+  api.update_profile(name=f'Karthik {n} followers')
+  print(f'karthik{n}followers')
   time.sleep(60)
   
   
